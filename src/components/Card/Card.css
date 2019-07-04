@@ -1,0 +1,63 @@
+.eui-app-card .eui-app-card-circle img {
+	margin-top: 0px !important;
+	width: 100%;
+}
+
+.eui-app-card .eui-app-card-circle {
+	overflow: hidden;
+	position: relative;
+}
+
+.eui-app-card > p {
+	font-size: 0.3em;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.eui-app-card .eui-app-card-circle::before {
+	content: '';
+	background: linear-gradient(103deg, #757b7a, #e5e8e8);
+	background-size: 200% 200%;
+	animation: loading 2s ease infinite;
+
+	width: 200px;
+	height: 200px;
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0 !important;
+	will-change: background-position;
+	transition: all .7s ease;
+}
+
+.eui-app-card span.eui-app-card-link {
+	display: none !important;
+}
+
+.eui-app-card.loading .eui-app-card-circle::before {
+	z-index: 10;
+	opacity: 1 !important;
+}
+
+.eui-app-card.loading .eui-app-card-circle img {
+	z-index: 0 !important;
+	opacity: 0;
+}
+
+.eui-app-card .eui-app-card-circle img {
+	opacity: 1;
+	transition: all 1s ease;
+}
+
+@keyframes loading {
+	0% {
+		background-position: 0% 97%;
+	}
+	50% {
+		background-position: 100% 4%;
+	}
+	100% {
+		background-position: 0% 97%;
+	}
+}

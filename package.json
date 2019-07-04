@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "emerald-ui": "^1.1.2",
     "react": "^16.8.6",
+    "react-dnd": "^8.0.3",
+    "react-dnd-html5-backend": "^8.0.3",
     "react-dom": "^16.8.6",
+    "react-palette": "^1.0.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
@@ -27,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^1.6.1"
   }
 }
